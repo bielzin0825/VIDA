@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'DancingScript';
+  src: url('fonts/DancingScript-Regular.ttf') format('truetype');
+}
+
+body.galeria-body {
+  background: linear-gradient(145deg, #ffe2ed, #ffd2e3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'DancingScript', cursive;
+}
+
+.galeria {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px;
+  border: 5px solid #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 320px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.legenda {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #c4376d;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.fade {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* Botões estilosos */
+.botao {
+  background: linear-gradient(135deg, #ff7eb9, #ff65a3);
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.3s ease, background 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.botao::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-25deg);
+  transition: left 0.5s;
+}
+
+.botao:hover::after {
+  left: 125%;
+}
+
+.botao:hover {
+  transform: scale(1.12);
+  box-shadow: 0 10px 20px rgba(255, 100, 160, 0.4);
+}
+
+/* Botão de vídeo final */
+.video-btn {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #ff6ea0;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'DancingScript', cursive;
+  box-shadow: 0 4px 10px rgba(255, 110, 160, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.video-btn:hover {
+  background: #ff4f87;
+  transform: scale(1.05);
+}

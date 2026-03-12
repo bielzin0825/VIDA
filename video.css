@@ -1,0 +1,67 @@
+/* Fundo rosa específico para a página de vídeo */
+body.rosa {
+  background: linear-gradient(to top, #ffd6e9, #ffd6e9);
+  overflow: hidden;
+}
+
+/* Corações subindo */
+.hearts {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url('img/heart.png') no-repeat center/contain;
+  animation: subir 5s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes subir {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.video-polaroid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.titulo-video {
+  font-family: 'DancingScript', cursive;
+  color: #c4376d;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.legenda-video {
+  font-size: 1.2em;
+  color: #c4376d;
+  margin-top: 10px;
+  font-family: 'DancingScript', cursive;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.polaroid video {
+  width: 170px;  /* ajuste conforme necessário */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}

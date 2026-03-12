@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Amoor</title>
+    <link rel="stylesheet" href="video.css" />
+    <link rel="icon" type="image/png" href="fotos/foto20.img.jpeg" />
+</head>
+
+<body class="galeria-body rosa">
+
+    <div class="video-polaroid">
+        <h1 class="titulo-video">FELIZ 1 MÊSSSS AMOOR 💖</h1>
+
+        <div class="polaroid">
+            <video controls width="100%" height="auto">
+                <source src="video/WhatsApp Video 2026-03-11 at 22.32.45.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos :(
+            </video>
+            <div class="polaroid">
+                <video controls width="100%" height="auto">
+                    <source src="video/WhatsApp Video 2026-03-11 at 22.32.52.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos :(
+                </video>
+            </div>
+             <div class="polaroid">
+                <video controls width="100%" height="auto">
+                    <source src="video/WhatsApp Video 2026-03-11 at 22.32.56.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos :(
+                </video>
+            <div class="legenda legenda-video">Que esses vídeos te lembre do quanto eu te amo ❤️</div>
+        </div>
+    </div>
+
+    <!-- Corações animados -->
+    <div class="hearts"></div>
+
+    <!-- Script dos corações -->
+    <script>
+        function criarCoracoes() {
+            const container = document.querySelector('.hearts');
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's'; // 3 a 6s
+
+            container.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+
+        setInterval(criarCoracoes, 300);
+    </script>
+
+</body>
+
+</html>
